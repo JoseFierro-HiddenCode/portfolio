@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jfcris.dev Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-img">
+      <h1 class="hero-name">JoséFierro.<span>dev</span></h1>
+      <div class="social-hero-icons">
+  <a href="https://www.instagram.com/j10_fierro/?next=%2F" target="_blank" aria-label="Instagram">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />
+  </a>
+  <a href="https://www.behance.net/josefierr004" target="_blank" aria-label="Behance">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/behance.svg" alt="Behance" />
+  </a>
+  <a href="https://github.com/JoseFierro-HiddenCode" target="_blank" aria-label="GitHub">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" />
+  </a>
+</div>
+
+      <p class="hero-desc">// Desarrollador backend & frontend apasionado por la automatización y la elegancia del código.</p>  
+    </div>
+
+    <!-- Contenido -->
+    <div class="hero-content cards-layout">
+      <!-- Columna Izquierda: Card grande -->
+      <div class="info-column">
+        <div class="info-card large">
+<pre><code>
+<span class="keyword">class</span> Developer {
+  <span class="property">name</span>: <span class="string">"José Fierro"</span>,
+  <span class="property">location</span>: <span class="string">"Huancayo"</span>,
+  <span class="property">stack</span>: [<span class="string">"PHP"</span>, <span class="string">"JS"</span>, <br> <span class="string">"HTML"</span> , <span class="string">"CSS"</span> ]
+}
+</code></pre>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: 2 cards pequeños -->
+      <div class="info-column smalls">
+        <div class="info-card small">
+<pre><code>
+<span class="keyword">const</span> email = <span class="string">"jfcris1010@gmail.com"</span>;
+<span class="keyword">const</span> github = <span class="string">JoseFierro-HiddenCode"</span>;
+<span class="keyword">const</span> phone number = <span class="string">"944884315"</span>;
+</code></pre>
+        </div>
+        <div class="info-card small">
+<pre><code>
+<span class="keyword">let</span> skills = [
+  <span class="string">"HTML"</span>,
+  <span class="string">"CSS"</span>,
+  <span class="string">"JavaScript"</span>,
+  <span class="string">"PHP"</span>
+];
+</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- FRASE FINAL -->
+    <div class="quote-terminal">
+      <pre><code id="typing-line">node dev.js</code></pre>
+    </div>
+  </section>
+
+ <!-- SKILLS -->
+<section class="skills">
+  <h2 class="jose"> ✨ Habilidades</h2>
+  <br>
+  <br>
+  <div class="skill-bars">
+    <div class="skill">
+      <div class="circle-container">
+        <svg>
+          <circle cx="50" cy="50" r="45"></circle>
+          <circle class="skill-bar" cx="50" cy="50" r="45" data-percent="90"></circle>
+        </svg>
+        <div class="icon-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+        </div>
+      </div>
+      <div class="percent">90%</div>
+      <span>HTML</span>
+    </div>
+
+    <div class="skill">
+      <div class="circle-container">
+        <svg>
+          <circle cx="50" cy="50" r="45"></circle>
+          <circle class="skill-bar" cx="50" cy="50" r="45" data-percent="80"></circle>
+        </svg>
+        <div class="icon-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+        </div>
+      </div>
+      <div class="percent">80%</div>
+      <span>CSS</span>
+    </div>
+
+    <div class="skill">
+      <div class="circle-container">
+        <svg>
+          <circle cx="50" cy="50" r="45"></circle>
+          <circle class="skill-bar" cx="50" cy="50" r="45" data-percent="75"></circle>
+        </svg>
+        <div class="icon-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">
+        </div>
+      </div>
+      <div class="percent">75%</div>
+      <span>JavaScript</span>
+    </div>
+
+    <div class="skill">
+      <div class="circle-container">
+        <svg>
+          <circle cx="50" cy="50" r="45"></circle>
+          <circle class="skill-bar" cx="50" cy="50" r="45" data-percent="70"></circle>
+        </svg>
+        <div class="icon-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+        </div>
+      </div>
+      <div class="percent">70%</div>
+      <span>PHP</span>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script>
+    const lines = [
+      'node dev.js',
+      'console.log("Si se puede soñar, se puede programar");',
+      'export const dream = { code: true };'
+    ];
+
+    let i = 0, j = 0;
+    let currentLine = '';
+    const typingTarget = document.getElementById("typing-line");
+
+    function type() {
+      if (j < lines[i].length) {
+        typingTarget.textContent += lines[i].charAt(j);
+        j++;
+        setTimeout(type, 50);
+      } else {
+        setTimeout(() => {
+          i = (i + 1) % lines.length;
+          j = 0;
+          typingTarget.textContent = '';
+          type();
+        }, 2500);
+      }
+    }
+
+    typingTarget.textContent = '';
+    type();
+  </script>
+
+<section class="featured-projects">
+  <h2>🚀 Proyectos Destacados</h2>
+
+  <div class="projects-container">
+    <!-- Proyecto 1 -->
+    <div class="project-card">
+      <div class="icon">🛠️</div>
+      <h3>Gestión Técnica</h3>
+      <p>Sistema para registrar vehículos, fases, tareas y subir imágenes. Optimizado para técnicos, clientes y gerencia.</p>
+      <div class="tech-tags">
+        <span>PHP</span>
+        <span>MySQL</span>
+        <span>JS</span>
+      </div>
+      <a href="https://www.behance.net/tuusuario" target="_blank" class="btn-project">🔗 Ver en Behance</a>
+    </div>
+
+    <!-- Proyecto 2 -->
+    <div class="project-card">
+      <div class="icon">📦</div>
+      <h3>Inventario CRUD</h3>
+      <p>Aplicación CRUD de inventario con autenticación y reportes en PDF. Interfaz amigable, ideal para pequeñas empresas.</p>
+      <div class="tech-tags">
+        <span>Laravel</span>
+        <span>Blade</span>
+        <span>JS</span>
+      </div>
+      <a href="https://www.behance.net/tuusuario" target="_blank" class="btn-project">🔗 Ver en Behance</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- TERMINAL DE CONTACTO -->
+<section class="contact-terminal">
+  <div class="terminal-window">
+    <div class="terminal-header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="terminal-title">jfcris@portfolio:~</span>
+    </div>
+    <div class="terminal-body" id="terminal-output">
+      <p>> escribe <code>help</code> para comenzar</p>
+    </div>
+    <div class="terminal-input">
+      <span>> </span><input type="text" id="terminal-cmd" autocomplete="off" placeholder="Escribe un comando...">
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>&copy; 2025 José Fierro. Todos los derechos reservados. 🛡️</p>
+</footer>
+
+</body>
+</html>
